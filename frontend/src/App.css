@@ -1,0 +1,67 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.auth-form {
+  border: 2px solid aliceblue;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: left;
+  background-color: azure;
+  box-shadow: 0px 0px 4px rgb(151, 200, 255);
+}
+
+.form-input {
+  outline: none;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  margin: 10px 0;
+  display: block;
+  box-shadow: 0px 0px 4px;
+  min-width: 200px;
+  width: 60%;
+  /* justify-self: center; */
+}
+
+
+.form-input:focus {
+  box-shadow: 0px 0px 10px;
+}
+
+.btn {
+  outline: none;
+  background-color: blue;
+  color: white;
+  display: block;
+  border: none;
+  /* justify-self: center; */
+}
+
+.btn:hover {
+  background-color: darkblue;
+  color: white;
+}
+.btn:active {
+  background-color: blue !important;
+  color: white !important;
+}
+.admin-view, .basic-view {
+  margin: 20px 0;
+}
+
+.admin-view td,.basic-view td {
+  padding: 10px;
+}
+
+.btn-success{
+  background-color: rgb(153, 0, 255);
+}
+.btn-success:active{
+  background-color: rgb(153, 0, 255) !important;
+}
+.btn-success:hover {
+  background-color: rgb(75, 0, 100);
+}
