@@ -17,13 +17,12 @@ const supabase = createClient(
   process.env.SUPABASE_ANON_KEY
 );
 
-// function md5(input) {
-//   return crypto.createHash('md5').update(input).digest('hex');
-// }
+function md5(input) {
+  return crypto.createHash('md5').update(input).digest('hex');
+}
 app.get('/', (req, res) => {
   return res.send("Hello World");
 });
-
 app.post('/api/login', async (req, res) => {
   try {
     let { userid, password } = req.body;
@@ -40,7 +39,7 @@ app.post('/api/login', async (req, res) => {
     }
     // console.log(userData);
     
-    if (password == userData.password_hash) {
+    if (md5(password) == userData.password_hash) {
       // console.log("Passwords match");
       // return res.status(200).json({error : 'Now will login you'});
     }else {

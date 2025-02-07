@@ -1,11 +1,5 @@
 import { useState } from 'react';
 import axios from 'axios';
-import md5 from 'md5';
-
-function hashPassword (password) {
-  const hash = md5(password);
-  return hash;
-};
 
 const api = axios.create({
     baseURL: import.meta.env.VITE_BACKEND_URL,
@@ -20,12 +14,8 @@ const LoginForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
-        let hashedPassword = hashPassword(credentials.password);
         try {
-            const { data } = await api.post('/api/login', {
-                userid: credentials.userid,
-                password: hashedPassword
-            });
+            const { data } = await api.post('/api/login', credentials);
             setUserData(data);
         } catch (err) {
             setError(err.response?.data?.error || 'Login failed. Check credentials.');
