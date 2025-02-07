@@ -20,7 +20,9 @@ const supabase = createClient(
 function md5(input) {
   return crypto.createHash('md5').update(input).digest('hex');
 }
-
+app.get('/', (req, res) => {
+  return res.send("Hello World");
+});
 app.post('/api/login', async (req, res) => {
   try {
     let { userid, password } = req.body;
