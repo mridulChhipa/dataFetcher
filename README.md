@@ -19,8 +19,8 @@ This is a full-stack web application using Vite for the frontend and Node.js wit
 Clone the repository and install dependencies for both frontend and backend.
 
 ```sh
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/mridulChhipa/dataFetcher.git
+cd dataFetcher
 ```
 
 ### Backend Setup
@@ -54,8 +54,17 @@ The frontend runs on `http://localhost:5173` (default, Vite's default dev server
 ## Environment Variables
 
 Create a `.env` file in the `backend` directory with the following variables:
+This one is for backend
 ```env
-PORT=3000
+SUPABASE_URL=...
+SUPABASE_ANON_KEY=...
+PORT = 3000
+CLIENT_URL=http://localhost:5173
+```
+
+This one is for frontend
+```env
+VITE_BACKEND_URL='http://localhost:3000'
 ```
 ## Building for Production
 
