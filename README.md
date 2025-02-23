@@ -34,7 +34,19 @@ npm install
 cd frontend
 npm install
 ```
+## Environment Variables
 
+Create a `.env` file in the `backend` directory with the following variables:
+```env
+SUPABASE_URL=...
+SUPABASE_ANON_KEY=...
+PORT = 3000
+CLIENT_URL=http://localhost:5173
+```
+Create a `.env` file in the `frontend` directory with the following variables:
+```env
+VITE_BACKEND_URL='http://localhost:3000'
+```
 ## Running the App
 
 ### Start the Backend
@@ -51,21 +63,7 @@ npm run dev
 ```
 The frontend runs on `http://localhost:5173` (default, Vite's default dev server).
 
-## Environment Variables
 
-Create a `.env` file in the `backend` directory with the following variables:
-This one is for backend
-```env
-SUPABASE_URL=...
-SUPABASE_ANON_KEY=...
-PORT = 3000
-CLIENT_URL=http://localhost:5173
-```
-
-This one is for frontend
-```env
-VITE_BACKEND_URL='http://localhost:3000'
-```
 ## Building for Production
 
 ### Build Frontend
